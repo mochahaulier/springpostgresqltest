@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://mochahaulier.github.io")
 public class TodoController {
     // injecting
     @Autowired
     private TodoRepository todoRepository;
 
     @PostMapping("/todo")
-    public Todo postNote(@RequestBody Todo newTodo) {
+    public Todo postTodo(@RequestBody Todo newTodo) {
         return todoRepository.save(newTodo);
     }
 
